@@ -1,0 +1,14 @@
+carro = float(input("Informe o valor: "))
+aumento_carro = (0.004*carro)+carro
+poupanca = 10000
+rendimento = (0.007*poupanca)+poupanca
+mes = -1
+while True:
+    mes = mes + 1
+    aumento_p_carro = (0.004*aumento_carro)+aumento_carro
+    if rendimento < aumento_carro:
+        rendimento = (0.007*rendimento)+rendimento
+    else:
+        break
+
+print(f'Em {mes} meses poderá comprar seu carro a vista com suas aplicações.')
