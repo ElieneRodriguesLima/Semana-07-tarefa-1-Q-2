@@ -1,0 +1,22 @@
+populacaoB = int(input("Informe a população do País B: "))
+populacaoA = int(input("Informe a população do País A: "))
+
+A = (0.02*populacaoA)+populacaoA
+B = (0.03*populacaoB)+populacaoB
+ano = 0
+while True:
+    ano += 1
+    while A > B:
+        A = (0.02*A)+A
+        B = (0.03*B)+B
+        break
+    else:  
+        A = (0.03*populacaoA)+populacaoA
+        B = (0.02*populacaoB)+populacaoB
+        while A < B:
+            ano += 1
+            A = (0.03*A)+A
+            B = (0.02*B)+B
+        else:
+            break
+print(f'Irá ultrapassar com {ano} anos.')
